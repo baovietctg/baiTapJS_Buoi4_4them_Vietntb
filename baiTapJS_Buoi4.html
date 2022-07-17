@@ -33,6 +33,9 @@
           <li class="nav-item" role="presentation">
             <a class="nav-link" id="contact-tab" data-toggle="tab" href="#baiTapThem3" role="tab" aria-controls="contact" aria-selected="false">Bài tập thêm 3</a>
           </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#baiTapThem4" role="tab" aria-controls="contact" aria-selected="false">Bài tập thêm 4</a>
+          </li>
         </ul>
         <div class="tab-content" id="myTabContent">
           <div class="tab-pane fade show active" id="baiTap1" role="tabpanel" aria-labelledby="home-tab">
@@ -136,7 +139,6 @@
                   <label for="nam">Nhập năm</label>
                   <input type="number" class="form-control" id="nam" value="1989">
                 </div>
-
               </form>
               <div class="button d-flex justify-content-between">
               <button type="button" id="tinhNgayHomQua" class="btn btn-success">Ngày hôm qua</button>
@@ -178,6 +180,71 @@
               <button type="button" id="docSo" class="btn btn-success">Cách đọc số</button>
               </div>
               <p class="alert alert-info" id="txtDocSo"></p>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="baiTapThem4" role="tabpanel" aria-labelledby="contact-tab">
+            <div class="container py-5 w-100" id="baiThem4">
+              <h3>Bài tập thêm số 4 - Tìm sinh viên xa trường nhất</h3>
+              <form class="d-flex flex-row">
+                <div class="form-group">
+                  <label for="sinhvien1">Nhập tên Sinh viên 1</label>
+                  <input type="text" class="form-control" id="sinhVien1" value="">
+                </div>
+                <div class="form-group">
+                  <label for="x1">Nhập tọa độ X nhà SV 1</label>
+                  <input type="number" class="form-control" id="x1" value="">
+                </div>
+                <div class="form-group">
+                  <label for="y1">Nhập tọa độ Y nhà SV 1</label>
+                  <input type="number" class="form-control" id="y1" value="">
+                </div>
+              </form>
+              <form class="d-flex flex-row">
+                <div class="form-group">
+                  <label for="sinhvien2">Nhập tên Sinh viên 2</label>
+                  <input type="text" class="form-control" id="sinhVien2" value="">
+                </div>
+                <div class="form-group">
+                  <label for="x2">Nhập tọa độ X nhà SV 2</label>
+                  <input type="number" class="form-control" id="x2" value="">
+                </div>
+                <div class="form-group">
+                  <label for="y2">Nhập tọa độ Y nhà SV 2</label>
+                  <input type="number" class="form-control" id="y2" value="">
+                </div>
+              </form>
+              <form class="d-flex flex-row">
+                <div class="form-group">
+                  <label for="sinhvien3">Nhập tên Sinh viên 3</label>
+                  <input type="text" class="form-control" id="sinhVien3" value="">
+                </div>
+                <div class="form-group">
+                  <label for="x3">Nhập tọa độ X nhà SV 3</label>
+                  <input type="number" class="form-control" id="x3" value="">
+                </div>
+                <div class="form-group">
+                  <label for="y3">Nhập tọa độ Y nhà SV 3</label>
+                  <input type="number" class="form-control" id="y3" value="">
+                </div>
+              </form>
+              <form class="d-flex flex-row">
+                <div class="form-group">
+                  <label for="tenTruong">Nhập tên trường Đại học</label>
+                  <input type="text" class="form-control" id="tenTruong" value="Đại học Quy Nhơn">
+                </div>
+                <div class="form-group">
+                  <label for="x">Nhập tọa độ X trường học</label>
+                  <input type="number" class="form-control" id="x" value="">
+                </div>
+                <div class="form-group">
+                  <label for="y">Nhập tọa độ Y trường học</label>
+                  <input type="number" class="form-control" id="y" value="">
+                </div>
+              </form>
+              <div class="button d-flex justify-content-between">
+              <button type="button" id="timSV" class="btn btn-success">Tìm sinh viên xa trường</button>
+              </div>
+              <div class="w-100"><p class="alert alert-info" id="txtXaTruong"></p></div>
             </div>
           </div>
         </div>

@@ -417,8 +417,137 @@ function docSo() {
             alert("Nhập số có 3 chữ số!!!")
             break;
     }
+    switch (hangChuc) {
+        case 1:
+            docHangChuc = "mười";
+            break;
+        case 2:
+            docHangChuc = "hai";
+            break;
+        case 3:
+            docHangChuc = "ba";
+            break;
+        case 4:
+            docHangChuc = "bốn";
+            break;
+        case 5:
+            docHangChuc = "năm";
+            break;
+        case 6:
+            docHangChuc = "sáu";
+            break;
+        case 7:
+            docHangChuc = "bảy";
+            break;
+        case 8:
+            docHangChuc = "tám";
+            break;
+        case 9:
+            docHangChuc = "chín";
+            break;
+        default:
+            alert("Nhập số có 3 chữ số!!!")
+            break;
+    }
+    switch (hangDonVi) {
+        case 1:
+            docHangDV = "một";
+            break;
+        case 2:
+            docHangDV = "hai";
+            break;
+        case 3:
+            docHangDV = "ba";
+            break;
+        case 4:
+            docHangDV = "bốn";
+            break;
+        case 5:
+            docHangDV = "lăm";
+            break;
+        case 6:
+            docHangDV = "sáu";
+            break;
+        case 7:
+            docHangDV = "bảy";
+            break;
+        case 8:
+            docHangDV = "tám";
+            break;
+        case 9:
+            ddocHangDV = "chín";
+            break;
+        default:
+            alert("Nhập số có 3 chữ số!!!")
+            break;
+    }
+    document.getElementById("txtDocSo").innerHTML = docHangTram + " trăm " + docHangChuc + " mươi " + docHangDV;
 }
 document.getElementById("docSo").onclick = docSo;
+
+/**
+*! Bài tập thêm số 4 - tìm sinh viên xa trường nhất
+* Khối 1 - Input
+* Nhập tên và tọa độ nhà (tọa độ x,y) của 3 sinh viên
+* Nhập tọa độ (x,y) của trường học 
+* 
+* Khối 2:
+* B1: tạo biến và gán giá trị biến
+* - sinhVien1, sinhVien2, sinhVien3: tên 3 sinh viên
+* - x,y: tọa độ trường học
+* - x1,y1: tọa độ nhà sinh viên 1
+* - ...
+* - x3,y3: tọa độ nhà sinh viên 3
+* d1: khoảng cách từ nhà sinh viên 1 đến trường học
+* ....
+* d3: khoảng cách từ nhà sinh viên 3 đến trường học
+* B2:
+* - tính khoảng cách từ nhà từng sinh viên đến trường học theo công thức
+* + d1 = sqrt(pow(x1-x,2)+pow(y1-y,2))
+* B3: Sử dụng switch case để hiển thị cách đọc số:
+* B4: thông báo kết quả
+* 
+* Khối 3 - Output
+* Hiển thị cách đọc số có 3 chữ số đã nhập
+*/
+
+function timSV(){
+    var sinhVien1 = document.getElementById("sinhVien1").value;
+    var sinhVien2 = document.getElementById("sinhVien2").value;
+    var sinhVien3 = document.getElementById("sinhVien3").value;
+    var x = Number(document.getElementById("x").value);
+    var x1 = Number(document.getElementById("x1").value);
+    var x2 = Number(document.getElementById("x2").value);
+    var x3 = Number(document.getElementById("x3").value);
+    var y = Number(document.getElementById("y").value);
+    var y1 = Number(document.getElementById("y1").value);
+    var y2 = Number(document.getElementById("y2").value);
+    var y3 = Number(document.getElementById("y3").value);
+
+    var d1 = Math.sqrt(Math.pow(x1-x,2)+Math.pow(y1-y,2));
+    var d2 = Math.sqrt(Math.pow(x2-x,2)+Math.pow(y2-y,2));
+    var d3 = Math.sqrt(Math.pow(x3-x,2)+Math.pow(y3-y,2));
+    var ketqua = 0;
+    if (d1 > d2){
+        if (d1 > d3){
+            ketqua = sinhVien1;
+        }else {
+            ketqua = sinhVien3;
+        }
+    }else if (d1 < d2){
+        if (d1 > d3){
+            ketqua = sinhVien2;
+        }else if (d2 > d3){
+            ketqua = sinhVien2;
+        }else {
+            ketqua = sinhVien3;
+        }
+    }else {
+        ketqua = "Nhà 3 sinh viên gần trường như nhau";
+    }
+    document.getElementById("txtXaTruong").innerHTML = "Nhà sinh viên " + ketqua + " xa trường nhất ";
+}
+document.getElementById("timSV").onclick = timSV;
 
 
 
